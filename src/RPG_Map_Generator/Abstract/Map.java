@@ -6,15 +6,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public abstract class Map {
-    public void play() {
-        Tile[][] matrix = new Tile[3][3];
+    Tile[][] matrix = new Tile[6][6];
 
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = createTile();
-            }
-        }
-
+    public void Display() {
         System.out.println("Display:");
         for (Tile[] tiles : matrix) {
             for (Tile tile : tiles) {
@@ -22,6 +16,16 @@ public abstract class Map {
             }
             System.out.println(); // Move to the next row
         }
+    }
+
+    public void play() {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = createTile();
+            }
+        }
+
+        Display();
 
         int currentRow = 0;
         int currentCol = 0;
