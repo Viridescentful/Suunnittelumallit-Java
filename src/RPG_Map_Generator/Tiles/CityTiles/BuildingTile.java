@@ -5,7 +5,7 @@ import RPG_Map_Generator.Abstract.Tile;
 public class BuildingTile extends Tile {
     @Override
     public String getCharacter() {
-        return "B"; // Represents a Building Tile
+        return "B";
     }
 
     @Override
