@@ -7,9 +7,9 @@ public class CheckboxB extends Checkbox {
 
     public static String getWithBorder(String text) {
         int textLength = text.length();
-        String border = "[#O" + "O".repeat(textLength) + "O#]";
+        String border = " (<|" + "*".repeat(textLength) + "|>)";
 
-        return border + "\n" + "[| " + text + " |]" + "\n" + border;
+        return border + "\n" + "(<| " + text + " |>)" + "\n" + border;
     }
 
     public CheckboxB(String text) {

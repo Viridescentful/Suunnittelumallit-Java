@@ -8,6 +8,7 @@ public abstract class UIFactory {
     public void Display() {
         for (Object component : components) {
             System.out.println(component.toString());
+            System.out.println();
         }
     }
 

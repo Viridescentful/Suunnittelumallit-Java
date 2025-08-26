@@ -7,9 +7,9 @@ public class TextFieldA extends TextField {
 
     public static String getWithBorder(String text) {
         int textLength = text.length();
-        String border = "[#O" + "O".repeat(textLength) + "O#]";
+        String border = "{o_" + "_".repeat(textLength) + "_o}";
 
-        return border + "\n" + "[| " + text + " |]" + "\n" + border;
+        return border + "\n" + "{| " + text + " |}" + "\n" + border;
     }
 
     public TextFieldA(String text) {
