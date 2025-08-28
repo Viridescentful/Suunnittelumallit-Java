@@ -1,10 +1,10 @@
-package Weatherstation_simulator.Classes;
+package Weather_station_simulator.Classes;
 
-import Weatherstation_simulator.Abstract.Observer;
-import Weatherstation_simulator.Abstract.Weatherstation;
+import Weather_station_simulator.Abstract.Observer;
+import Weather_station_simulator.Abstract.WeatherStation;
 
-public class LatestWeatherstation extends Weatherstation {
-    public LatestWeatherstation(String name) {
+public class LatestWeatherStation extends WeatherStation {
+    public LatestWeatherStation(String name) {
         super(name);
     }
 

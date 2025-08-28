@@ -1,13 +1,13 @@
-package Weatherstation_simulator;
+package Weather_station_simulator;
 
-import Weatherstation_simulator.Abstract.Observer;
-import Weatherstation_simulator.Abstract.Weatherstation;
-import Weatherstation_simulator.Classes.LatestObserver;
-import Weatherstation_simulator.Classes.LatestWeatherstation;
+import Weather_station_simulator.Abstract.Observer;
+import Weather_station_simulator.Abstract.WeatherStation;
+import Weather_station_simulator.Classes.LatestObserver;
+import Weather_station_simulator.Classes.LatestWeatherStation;
 
 public class Main {
     public static void main(String[] args) {
-        Weatherstation weatherstation = new LatestWeatherstation("Local Weatherstation");
+        WeatherStation weatherstation = new LatestWeatherStation("Local Weatherstation");
 
         Observer observer1 = new LatestObserver("Observer 1");
         Observer observer2 = new LatestObserver("Observer 2");

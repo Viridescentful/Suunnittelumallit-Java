@@ -1,9 +1,9 @@
-package Weatherstation_simulator.Abstract;
+package Weather_station_simulator.Abstract;
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Weatherstation extends Thread {
+public abstract class WeatherStation extends Thread {
     protected String name;
     protected Integer temperature;
     protected Random random = new Random();
@@ -11,7 +11,7 @@ public abstract class Weatherstation extends Thread {
 
     ArrayList<Observer> observers = new ArrayList<>();
 
-    public Weatherstation(String name) {
+    public WeatherStation(String name) {
         this.name = name;
         this.temperature = (int) (Math.round(random.nextDouble() * 30 * 10.0) / 10.0);
     }

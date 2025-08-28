@@ -1,6 +1,6 @@
-package Weatherstation_simulator.Classes;
+package Weather_station_simulator.Classes;
 
-import Weatherstation_simulator.Abstract.Observer;
+import Weather_station_simulator.Abstract.Observer;
 
 public class LatestObserver extends Observer {
     public LatestObserver(String name) {

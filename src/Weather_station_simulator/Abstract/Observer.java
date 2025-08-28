@@ -1,4 +1,4 @@
-package Weatherstation_simulator.Abstract;
+package Weather_station_simulator.Abstract;
 
 public abstract class Observer {
     protected String name;
