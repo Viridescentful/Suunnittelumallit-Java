@@ -4,7 +4,18 @@ import Organisation_Structure.Classes.Organisation;
 import Organisation_Structure.Classes.Department;
 import Organisation_Structure.Classes.Employee;
 
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.StringWriter;
+
 public class Main {
+
+    public static final String RESET = "\u001B[0m";
+    public static final String SALARY = "\u001B[38;2;250;197;7m";
+
     public static void main(String[] args) {
         Organisation organisation = new Organisation("My Organisation");
 
@@ -25,6 +36,6 @@ public class Main {
 
         System.out.println(organisation.displayInfo());
 
-        System.out.println("Total Salary: " + organisation.getSalary());
+        System.out.println(SALARY + "Total Salary: " + organisation.getSalary() + RESET);
     }
 }

@@ -5,6 +5,11 @@ import Organisation_Structure.Abstact.OrganisationComponent;
 import java.util.ArrayList;
 
 public class Department extends OrganisationComponent {
+    public static final String RESET = "\u001B[0m";
+    public static final String COLOR = "\u001B[38;2;32;171;69m";
+
+
+
     ArrayList<Employee> employees = new ArrayList<>();
 
     public Department(String name) {
@@ -31,13 +36,13 @@ public class Department extends OrganisationComponent {
 
     @Override
     public Object displayInfo() {
-        StringBuilder info = new StringBuilder("  <Department> \n" +
-                "   <name>" + name + "</name>\n");
+        StringBuilder info = new StringBuilder(COLOR + " <Department> \n" +
+                "  <name>" + name + "</name>\n" + RESET);
         for (OrganisationComponent component : employees) {
             info.append(component.displayInfo());
         }
 
-        info.append("  </Department>\n");
+        info.append(COLOR + " </Department>\n" + RESET);
 
         return info.toString();
     }
