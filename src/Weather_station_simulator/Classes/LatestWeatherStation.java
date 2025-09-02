@@ -8,6 +8,9 @@ public class LatestWeatherStation extends WeatherStation {
         super(name);
     }
 
+    public static final String RESET = "\u001B[0m";
+    public static final String REMOVE = "\u001B[38;2;227;50;50m";
+
     @Override
     public void add(Observer observer) {
         weatherObservers.add(observer);
@@ -18,10 +21,12 @@ public class LatestWeatherStation extends WeatherStation {
         if (weatherObservers.contains(observer)) {
             weatherObservers.remove(observer);
 
-            System.out.println(observer.getName() + " removed.");
+            System.out.println(REMOVE + observer.getName() + " removed." + RESET);
         } else {
             System.out.println("Observer not found.");
         }
+
+        System.out.println();
     }
 
     @Override
@@ -29,6 +34,7 @@ public class LatestWeatherStation extends WeatherStation {
         for (Observer observer : weatherObservers) {
             observer.update(temperature);
         }
+        System.out.println();
     }
 
     @Override

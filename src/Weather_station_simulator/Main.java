@@ -26,5 +26,13 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+        try {
+            Thread.sleep(5711);
+
+            weatherstation.remove(observer1);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

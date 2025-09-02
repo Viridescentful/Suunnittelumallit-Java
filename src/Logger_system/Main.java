@@ -22,5 +22,9 @@ public class Main {
         logger.write("Back to the default log.");
 
         logger.printLogs();
+
+        Logger logger2 = Logger.getInstance();
+
+        logger2.printLogs();
     }
 }
