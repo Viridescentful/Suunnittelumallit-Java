@@ -7,6 +7,9 @@ import Customisable_Printer.Classes.XMLPrinter;
 
 public class Main {
     public static void main(String[] args) {
+        Printer basicprinter = new BasicPrinter();
+        basicprinter.print("Hello, World!");
+
         Printer printer = new EncrypterPrinter(new XMLPrinter(new BasicPrinter()));
         printer.print("Hello, World!");
     }

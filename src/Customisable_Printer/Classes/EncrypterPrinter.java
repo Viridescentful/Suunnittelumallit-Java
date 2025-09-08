@@ -16,15 +16,15 @@ public class EncrypterPrinter extends DecoratorPrinter {
 
     public String encrypt(String message) {
         try {
-            KeyGenerator keyGen = KeyGenerator.getInstance("AES");
-            keyGen.init(128);
-            SecretKey secretKey = keyGen.generateKey();
+//            KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+//            keyGen.init(128);
+//            SecretKey secretKey = keyGen.generateKey();
+//
+//            Cipher cipher = Cipher.getInstance("AES");
+//            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+//            byte[] encryptedBytes = cipher.doFinal(message.getBytes());
 
-            Cipher cipher = Cipher.getInstance("AES");
-            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-            byte[] encryptedBytes = cipher.doFinal(message.getBytes());
-
-            return Base64.getEncoder().encodeToString(encryptedBytes);
+            return Base64.getEncoder().encodeToString(message.getBytes());
         } catch (Exception e) {
             e.printStackTrace();
             return "Error during encryption";
