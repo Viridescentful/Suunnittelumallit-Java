@@ -21,8 +21,10 @@ public class DevelopmentHandler extends Handler {
             for (String suggestion : suggestions) {
                 System.out.println("- " + suggestion);
             }
+            System.out.println();
         } else {
             System.out.println("Development Handler: Cannot handle. Sending to next handler.");
+            System.out.println();
             super.process(message);
         }
     }

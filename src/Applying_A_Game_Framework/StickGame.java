@@ -12,6 +12,11 @@ public class StickGame extends Game {
     private Player gamewinner;
     private int gameTurn;
 
+    public static final String RESET = "\u001B[0m";
+
+    public static final String TURN = "\u001B[38;2;250;179;12m";
+    public static final String WINNER = "\u001B[38;2;82;252;3m";
+
     @Override
     public void initializeGame(int numberOfPlayers) {
         this.sticks = new Sticks();
@@ -38,7 +43,7 @@ public class StickGame extends Game {
             sticks.initialize();
 
             if (gameTurn > 1) {
-                Player winner = players.getFirst();
+                Player winner = players.get(0);
 
                 for (Player p : players) {
                     if (p.getCurrentStick() == 0) {
@@ -60,12 +65,19 @@ public class StickGame extends Game {
                 }
 
                 if (winner.getCurrentStick() == 0) {
-                    System.out.println(winner.getName() + " wins the round with pity!");
+                    System.out.println(WINNER + winner.getName() + " wins the round with pity!" + RESET);
+                    System.out.println();
                 } else {
-                    System.out.println(winner.getName() + " wins the round with " + winner.getCurrentStick());
+                    System.out.println(WINNER + winner.getName() + " wins the round with " + winner.getCurrentStick() + RESET);
+                    System.out.println();
                 }
 
                 winner.setScore(winner.getScore() + 1);
+
+                for (Player p : players) {
+                    System.out.println(TURN + p.getName() + " has score: " + RESET + WINNER + p.getScore() + RESET + TURN + " and drew stick: " + p.getCurrentStick() + RESET);
+                }
+                System.out.println();
 
                 if (winner.getScore() == 3) {
                     gamewinner = winner;
@@ -80,18 +92,21 @@ public class StickGame extends Game {
         }
 
         Player currentPlayer = players.get(player);
-        System.out.println(currentPlayer.getName() + "'s turn.");
-
+        System.out.println(TURN + currentPlayer.getName() + "'s turn." + RESET);
+        System.out.println();
         System.out.print("Enter number of sticks to draw (1-"+ sticks.size() + "): ");
         int numberOfSticks = scanner.nextInt();
 
         int drawnStick = sticks.draw(numberOfSticks);
+        System.out.println();
         System.out.println(currentPlayer.getName() + " drew a stick with value: " + drawnStick);
+        System.out.println();
         currentPlayer.setCurrentStick(drawnStick);
     }
 
     @Override
     public void displayWinner() {
-        System.out.println(gamewinner.getName() + " wins the game!");
+        System.out.println(WINNER + gamewinner.getName() + " wins the game!" + RESET);
+        System.out.println();
     }
 }

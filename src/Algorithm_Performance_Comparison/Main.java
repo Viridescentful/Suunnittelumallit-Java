@@ -14,48 +14,14 @@ import static Algorithm_Performance_Comparison.Algorithms.GfGSelection.selection
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Operation operation = new Operation();
+        operation.perform();
+        operation.perform();
+        operation.perform();
 
-        SorterContext sorterHandler = new SorterContext(new Bubble());
-
-        // read amount
-        System.out.println("Enter the amount: ");
-        int size = scanner.nextInt();
-
-        int[] array = new int[size];
-
-        Random random = new Random();
-
-        for (int i = 0; i < size; i++) {
-            array[i] = random.nextInt(size);
-        }
-
-        int[] arrayForSort = Arrays.copyOf(array, array.length);
-
-        System.out.println("Select sort method: ");
-        System.out.println("1. Bubble");
-        System.out.println("2. Selection");
-        System.out.println("3. Merge");
-        int choice = scanner.nextInt();
-
-        switch (choice) {
-            case 1:
-                sorterHandler.setStrategy(new Bubble());
-                break;
-            case 2:
-                sorterHandler.setStrategy(new Selection());
-                break;
-            case 3:
-                sorterHandler.setStrategy(new Merge());
-                break;
-            default:
-                System.out.println("Invalid choice!");
-                return;
-        }
-
-        double paymentSuccessful = sorterHandler.processSort(arrayForSort);
-
-        System.out.println("Sorted array: " + Arrays.toString(arrayForSort));
-        System.out.println("Time taken: " + paymentSuccessful + " seconds");
+        Operation operation2 = new Operation();
+        operation2.perform();
+        operation2.perform();
+        operation2.perform();
     }
 }

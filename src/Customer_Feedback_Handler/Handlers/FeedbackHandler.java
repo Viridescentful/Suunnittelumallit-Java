@@ -14,8 +14,10 @@ public class FeedbackHandler extends Handler {
     public void process(Message message) {
         if (message.getType() == type) {
             System.out.println("Feedback Handler: Message handled, thank you for your feedback.");
+            System.out.println();
         } else {
             System.out.println("Feedback Handler: Cannot handle. Sending to next handler.");
+            System.out.println();
             super.process(message);
         }
     }

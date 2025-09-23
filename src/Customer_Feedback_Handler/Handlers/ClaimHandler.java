@@ -16,8 +16,10 @@ public class ClaimHandler extends Handler {
             } else {
                 System.out.println("Claim Handler: Message handled, your claim will be manually reviewed and responded to in 7 years.");
             }
+            System.out.println();
         } else {
             System.out.println("Claim Handler: Cannot handle. Sending to next handler.");
+            System.out.println();
             super.process(message);
         }
     }
