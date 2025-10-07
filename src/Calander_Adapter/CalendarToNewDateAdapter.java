@@ -46,6 +46,6 @@ public class CalendarToNewDateAdapter implements NewDateInterface {
 
     @Override
     public String toString() {
-        return String.format("%d-%02d-%02d", getYear(), getMonth(), getDay());
+        return String.format("%d/%02d/%02d", getDay(), getMonth(), getYear());
     }
 }

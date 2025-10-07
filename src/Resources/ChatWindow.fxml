@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="456.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea fx:id="chatbox" layoutX="26.0" layoutY="28.0" prefHeight="200.0" prefWidth="404.0" promptText="Chat View" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="messagefield" layoutX="14.0" layoutY="231.0" prefHeight="25.0" prefWidth="308.0" promptText="Message" />
+      <TextField fx:id="userfield" layoutX="14.0" layoutY="267.0" prefHeight="25.0" prefWidth="234.0" promptText="Recipent" />
+      <Button fx:id="postbutton" layoutX="336.0" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Post" />
+   </children>
+</AnchorPane>

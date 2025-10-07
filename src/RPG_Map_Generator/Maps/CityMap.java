@@ -12,8 +12,8 @@ public class CityMap extends Map {
     ArrayList<Tile> tiles = new ArrayList<Tile>();
 
     public CityMap() {
-        tiles.add(new BuildingTile());
         tiles.add(new RoadTile());
+        tiles.add(new BuildingTile());
         tiles.add(new WaterTile());
     }
 
