@@ -140,6 +140,8 @@ public class Main {
                                 System.out.println(userRecommendation);
                                 recommendations.add(userRecommendation);
                                 break;
+                            default:
+                                System.out.println("Invalid choice. Please try again.");
                         }
                     }
                     break;
